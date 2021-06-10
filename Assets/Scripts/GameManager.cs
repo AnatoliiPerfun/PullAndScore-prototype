@@ -7,26 +7,26 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    //Main Menu Variables
+    
     [SerializeField] Text playText;
     [SerializeField] GameObject mainMenu;
 
-    // Game Menu Varaibles
+    
     [SerializeField] Text levelText;
     [SerializeField] GameObject gameMenu;
     Vector3 nextLevelTextScale;
-    //Level Variables
+    
     [SerializeField] GameObject levels;
     
     private void OnEnable()
     {
         EventManager.onStartGame += ChooseLevel;
-        EventManager.onLevelComplete += LevelUp;
+        // EventManager.onLevelComplete += LevelUp;
     }
     private void OnDisable()
     {
         EventManager.onStartGame -= ChooseLevel;
-        EventManager.onLevelComplete -= LevelUp;
+        // EventManager.onLevelComplete -= LevelUp;
     }
   
     void ChooseLevel()

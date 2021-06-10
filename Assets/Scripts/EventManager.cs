@@ -7,7 +7,7 @@ public class EventManager : MonoBehaviour
     public delegate void StartGameDelegate();
     public static StartGameDelegate onStartGame;
     public static StartGameDelegate onRefreshGame;
-    public static StartGameDelegate onLevelComplete;
+    // public static StartGameDelegate onLevelComplete;
 
 
     public static void StartGame()
@@ -20,9 +20,9 @@ public class EventManager : MonoBehaviour
         if (onRefreshGame != null)
             onRefreshGame();
     }
-    public static void LevelComplete()
-    {
-        if (onLevelComplete != null)
-            onLevelComplete();
-    }
+    // public static void LevelComplete()
+    // {
+    //     if (onLevelComplete != null)
+    //         onLevelComplete();
+    // }
 }

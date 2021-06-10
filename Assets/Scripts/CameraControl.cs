@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 
 public class CameraControl : MonoBehaviour
@@ -9,8 +8,6 @@ public class CameraControl : MonoBehaviour
     void Start()
     {
         ChangeCameraRect();
-        //Test();
-        //ChangeFOV(mainCamera);
     }
 
     void ChangeCameraRect()
@@ -32,24 +29,8 @@ public class CameraControl : MonoBehaviour
             mainCamera.rect = rect;
             ChangeFOV(depthCamera);
         }
-        else // add pillarbox
-        {
-            //float scalewidth = 1.0f / scaleheight;
-
-            //Rect rect = mainCamera.rect;
-
-            //rect.width = scalewidth;
-            //rect.height = 1.0f;
-            //rect.x = (1.0f - scalewidth) / 2.0f;
-            //rect.y = 0;
-
-            //mainCamera.rect = rect;
-        }
     }
-    void Test()
-    {
-        mainCamera.aspect = 4f / 6f;
-    }
+    
     void ChangeFOV(Camera camera)
     {
         float fixedHorizontalFOV = 28f;

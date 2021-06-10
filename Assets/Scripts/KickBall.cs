@@ -38,13 +38,13 @@ public class KickBall : MonoBehaviour
     {
         EventManager.onStartGame += EnableKick;
         EventManager.onRefreshGame += EnableKick;
-        EventManager.onLevelComplete += LevelUp;
+        // EventManager.onLevelComplete += LevelUp;
     }
     private void OnDisable()
     {
         EventManager.onStartGame -= EnableKick;
         EventManager.onRefreshGame -= EnableKick;
-        EventManager.onLevelComplete -= LevelUp;
+        // EventManager.onLevelComplete -= LevelUp;
     }
     void EnableKick()
     {
@@ -69,12 +69,10 @@ public class KickBall : MonoBehaviour
         if (returned && kickEnabled)
         {
             Player();
-            //PlayerOld();
         }
     }
     void Player()
     {
-
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -236,11 +234,11 @@ public class KickBall : MonoBehaviour
         inAir = false;
         returned = true;
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.name == "Net")
-        {
-            //Lost
-        }
-    }
+    // private void OnCollisionEnter(Collision collision)
+    // {
+    //     if (collision.gameObject.name == "Net")
+    //     {
+    //         //Lost
+    //     }
+    // }
 }
